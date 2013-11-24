@@ -72,7 +72,5 @@ class ApiTest < Sinatra::Base
     @result = JSON.parse(open(uri).read)
     erb :index
   end
-
-  run!
 end
 
