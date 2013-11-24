@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API TEST</title>
+  </head>
+  <body>
+    <h1>API TEST</h1>
+
+    <form action="/" method="post">
+      <di>
+        <label>key</label>
+        <input type="text" name="secret_key" value="<%= @secret_key %>">
+      </div>
+      <div>
+        <label>API種別</label>
+        <input type="text" name="api_type" value="<%= @api_type %>">
+      </div>
+      <div>
+        <label>KEYリスト</label>
+        <input type="text" name="key_list" value="<%= @key_list %>">
+      </div>
+      <div>
+        <input type="submit" value="check!">
+      </div>
+    </form>
+
+    <% if @result.kind_of?(Hash) %>
+      <div>
+        <%= puts_json_record(@result) %>
+      </div>
+    <% end %>
+  <body>
+</html>
